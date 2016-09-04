@@ -14,9 +14,19 @@ public class BinarySearchTest {
         assertEquals(BinarySearch.search(testAr, 1), 0);
         assertEquals(BinarySearch.search(testAr, 5), 4);
 
-        int[] testAr2 = {1};
-        assertEquals(BinarySearch.search(testAr2, 1), 0);
-        assertEquals(BinarySearch.search(testAr2, 2), -1);
-        assertEquals(BinarySearch.search(testAr2, 0), -1);
+        testAr = new int[]{1};
+        assertEquals(BinarySearch.search(testAr, 1), 0);
+        assertEquals(BinarySearch.search(testAr, 2), -1);
+        assertEquals(BinarySearch.search(testAr, 0), -1);
+
+        testAr = new int[0];
+        assertEquals(BinarySearch.search(testAr, 1), -1);
+        assertEquals(BinarySearch.search(testAr, 2), -1);
+        assertEquals(BinarySearch.search(testAr, 0), -1);
+
+        testAr = null;
+        assertEquals(BinarySearch.search(testAr, 1), -1);
+        assertEquals(BinarySearch.search(testAr, 2), -1);
+        assertEquals(BinarySearch.search(testAr, 0), -1);
     }
 }
